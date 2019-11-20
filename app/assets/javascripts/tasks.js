@@ -40,7 +40,7 @@ $(function() {
     ulTodos.html(htmlString);
     $('.toggle').change(toggleTask);
   });
-  
+
   $('#new-form').submit(function(event) {
     event.preventDefault();
     var textbox = $('.new-todo');
@@ -54,6 +54,7 @@ $(function() {
       var ulTodos = $('.todo-list');
       ulTodos.append(htmlString);
       $('.toggle').click(toggleTask);
+      $('.new-todo').val('');
     });
   });
 });
